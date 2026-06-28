@@ -7,6 +7,11 @@
   <title>{{ $title ?? 'Admin' }} – SADAR HUKUM</title>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
   @stack('styles')
+  <style>
+    /* Admin layout: offset main content past fixed sidebar */
+    .admin-main { margin-left: 0; }
+    @media (min-width: 1024px) { .admin-main { margin-left: 16rem; } }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased" x-data="{ sidebarOpen: false }">
 
