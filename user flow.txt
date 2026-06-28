@@ -1,0 +1,8 @@
+Ini user flow lengkap sistem SADAR HUKUM dengan 4 aktor dan 6 tahapan. Semua node bisa diklik untuk detail lebih lanjut.
+Ringkasan alur:
+① Akses Publik — Warga membuka portal, mencari, membaca, dan mengunduh perdes yang sudah berlaku tanpa perlu login.
+② Inisiasi Perdes — Sekdes/Kades login, membuat perdes baru, mengisi formulir awal (topik, nomor, tahun, dasar hukum), lalu menekan tombol Generate AI.
+③ AI Engine — AI menerima konteks, men-generate teks lengkap (Menimbang, Mengingat, Memutuskan, Batang Tubuh, Penutup), lalu merender preview + draft PDF.
+④ Review Draft — Sekdes mereview hasil AI, bisa mengedit langsung atau meminta generate ulang. Jika sudah oke, draft difinalisasi dengan status Menunggu BPD.
+⑤ Persetujuan BPD — BPD mendapat notifikasi, melakukan musyawarah, lalu memutuskan: disetujui (lanjut TTD digital Kades + BPD) atau ditolak/revisi (kembali ke Sekdes).
+⑥ Penerbitan — AI men-generate PDF final berformat resmi (kop, nomor, tanda tangan). Perdes dipublikasikan ke portal publik dan dicatat di Lembaran Desa dengan status Berlaku.
