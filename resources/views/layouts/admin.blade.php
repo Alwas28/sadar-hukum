@@ -8,7 +8,18 @@
   @vite(['resources/css/app.css', 'resources/js/app.js'])
   @stack('styles')
   <style>
-    /* Admin layout: offset main content past fixed sidebar */
+    /* Sidebar: hidden on mobile, always visible on desktop */
+    .admin-sidebar {
+      transform: translateX(-100%);
+      transition: transform 0.2s ease-in-out;
+    }
+    @media (min-width: 1024px) {
+      .admin-sidebar { transform: translateX(0) !important; }
+    }
+    /* Alpine opens sidebar on mobile */
+    .admin-sidebar.sidebar-open { transform: translateX(0); }
+
+    /* Main content: full width mobile, offset 16rem on desktop */
     .admin-main { margin-left: 0; }
     @media (min-width: 1024px) { .admin-main { margin-left: 16rem; } }
   </style>
@@ -27,8 +38,8 @@
        @click="sidebarOpen = false"
        class="fixed inset-0 z-20 bg-black/50 lg:hidden"></div>
 
-  <aside :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full'"
-         class="sidebar-bg fixed inset-y-0 left-0 z-30 w-64 flex flex-col transition-transform duration-200 ease-in-out lg:translate-x-0">
+  <aside :class="sidebarOpen ? 'sidebar-open' : ''"
+         class="admin-sidebar sidebar-bg fixed inset-y-0 left-0 z-30 w-64 flex flex-col">
 
     <!-- Logo area -->
     <div class="flex items-center gap-3 px-5 py-5 border-b border-white/10">
