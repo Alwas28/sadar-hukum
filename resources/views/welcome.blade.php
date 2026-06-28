@@ -598,6 +598,36 @@ $p = $palettes[$themeColor] ?? $palettes['hijau'];
 </section>
 
 
+<!-- ═══════════════════════════════════════════ KERJASAMA -->
+<section class="py-14 bg-white dark:bg-gray-800">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3"
+            style="background-color:var(--p-100);color:var(--p-700);">Mitra & Dukungan</span>
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white font-display">Kerjasama</h2>
+      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Didukung oleh institusi dan pemerintah daerah</p>
+    </div>
+    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+      <div class="flex flex-col items-center gap-2">
+        <img src="{{ asset('kerjasama/dikti.png') }}" alt="Kemendiktisaintek" class="h-16 md:h-20 object-contain"/>
+        <span class="text-xs text-gray-400 text-center">Kemendiktisaintek</span>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <img src="{{ asset('kerjasama/umk.png') }}" alt="Universitas Muhammadiyah Kendari" class="h-16 md:h-20 object-contain"/>
+        <span class="text-xs text-gray-400 text-center">Univ. Muhammadiyah Kendari</span>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <img src="{{ asset('kerjasama/bombana.png') }}" alt="Kabupaten Bombana" class="h-16 md:h-20 object-contain"/>
+        <span class="text-xs text-gray-400 text-center">Kab. Bombana</span>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <img src="{{ asset('kerjasama/bima.png') }}" alt="Kabupaten Bima" class="h-16 md:h-20 object-contain"/>
+        <span class="text-xs text-gray-400 text-center">Kab. Bima</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════════════════════════════════ HALAMAN STATIS -->
 @foreach($halamans as $idx => $hal)
 @php $reverse = $idx % 2 !== 0; @endphp
